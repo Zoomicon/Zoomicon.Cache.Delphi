@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{CF5CD849-A6A1-48E3-BFE1-CBACAEFDBBAA}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Source\Zoomicon.Cache.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\Zoomicon.Cache.Tests.dproj">
+            <Dependencies>Source\Zoomicon.Cache.dproj</Dependencies>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Zoomicon_Cache">
+        <MSBuild Projects="Source\Zoomicon.Cache.dproj"/>
+    </Target>
+    <Target Name="Zoomicon_Cache:Clean">
+        <MSBuild Projects="Source\Zoomicon.Cache.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Zoomicon_Cache:Make">
+        <MSBuild Projects="Source\Zoomicon.Cache.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Zoomicon_Cache_Tests" DependsOnTargets="Zoomicon.Cache">
+        <MSBuild Projects="Test\Zoomicon.Cache.Tests.dproj"/>
+    </Target>
+    <Target Name="Zoomicon_Cache_Tests:Clean" DependsOnTargets="Zoomicon.Cache:Clean">
+        <MSBuild Projects="Test\Zoomicon.Cache.Tests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Zoomicon_Cache_Tests:Make" DependsOnTargets="Zoomicon.Cache:Make">
+        <MSBuild Projects="Test\Zoomicon.Cache.Tests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Zoomicon_Cache;Zoomicon_Cache_Tests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Zoomicon_Cache:Clean;Zoomicon_Cache_Tests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Zoomicon_Cache:Make;Zoomicon_Cache_Tests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
