@@ -1,0 +1,29 @@
+{
+  "package": {
+    "name": "Zoomicon.Cache",
+    "version": "1.0",
+
+    "description": "Content Cache for Delphi",
+
+    "author": "George Birbilis - Zoomicon.com",
+    "license": "MIT",
+    
+    "dependencies": {}, 
+
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Zoomicon/Zoomicon.Cache.Delphi"
+    },
+    "main": "Source/Zoomicon.Cache.dproj",
+    "test": "Test/Zoomicon.Cache.Test.dproj",
+
+    "projects": [
+      "Source/Zoomicon.Cache.dproj",
+      "Test/Zoomicon.Cache.Test.dproj"
+    ],
+    "files": [
+      "Source/**/*.pas",
+      "Test/**/*.pas"
+    ]
+  }
+}
