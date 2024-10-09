@@ -200,6 +200,9 @@
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="Zoomicon.Cache.Classes.pas"/>
         <DCCReference Include="Zoomicon.Cache.Models.pas"/>
+        <None Include="..\boss.json"/>
+        <None Include="..\README.md"/>
+        <None Include="..\LICENSE.txt"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -238,6 +241,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\21.0\Bpl\Zoomicon.Cache.bpl" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="..\..\..\..\..\Public\Documents\Embarcadero\Studio\23.0\Bpl\Win64\Zoomicon.Cache.bpl" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>Zoomicon.Cache.bpl</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="OSX32">
                         <Operation>1</Operation>
