@@ -21,6 +21,8 @@ interface
       function GetFilepath(const Key: string): string;
     end;
 
+    //TODO: add IFilterCache to allow wrapping a cache with a chain of filters (e.g. to compress on Put, decompress on Get, similar for encrypting etc.)
+
 implementation
 
 end.

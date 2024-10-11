@@ -15,6 +15,7 @@ interface
   //      uppercase or lowercase before passing to any of the functions
 
   type
+
     TBaseCache = class(TInterfacedObject, IContentCache)
       protected
         function GetKeyHash(const Key: String): String; virtual;
