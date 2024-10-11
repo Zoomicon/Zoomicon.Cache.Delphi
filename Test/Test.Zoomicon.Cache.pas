@@ -28,7 +28,7 @@ interface
 
       published //need to pubish Test cases for them to be used
         procedure TestA;
-        procedure   TestB;
+        procedure TestB;
 
     end;
 

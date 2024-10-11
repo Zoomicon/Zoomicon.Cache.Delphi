@@ -25,6 +25,8 @@ package Zoomicon.Cache;
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Content Cache for Delphi'}
+{$LIBVERSION '2.0'}
 {$IMPLICITBUILD ON}
 
 requires
